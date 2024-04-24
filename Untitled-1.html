@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px 0px;
+        }
+        .k{
+            background-color: black;
+            width: 200px;
+            height: 1000px;
+            transition: 1s ease;
+            transform: translateX(-200px);
+        }
+        h2{
+            text-align: right;
+            font-size: larger;
+            font-weight: bolder;
+            color: blue;
+            padding: 15px 15px 0px 0px;
+        }
+        li
+        {
+            padding: 10px;
+            transition: 0.4s ease-out;
+            color: wheat;
+
+        }
+        li:hover{
+            background-color: yellow;
+        }
+        input[type="checkbox"]{
+            display: none;
+            visibility: hidden;
+            -webkit-appearance:none ;
+        }
+        .toggle
+        {
+            position:absolute;
+            background-color: white;
+            box-shadow: 0px 0px 20px  red;
+            width: 30px;
+            border-radius: 6px;
+            z-index: 1;
+            transform: translateX(11px) translateY(11px);
+            height: 30px;
+        }
+      .toggle  .f{
+position: absolute;
+width: 25px;
+height: 3px;
+background-color: black;
+
+
+}
+.toggle  .a
+{
+
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.toggle .q{
+    top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);   
+}
+.toggle .z{
+    top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+input[type="checkbox"]:checked ~ .toggle .q{
+    top: 10px;
+    left: 2px;
+    transform: rotate(45deg);
+}
+input[type="checkbox"]:checked ~ .toggle .z{
+    top: 10px;
+    left: 2px;
+    transform: rotate(-45deg);
+}
+input[type="checkbox"]:checked ~ .toggle .a{
+
+opacity: 0;
+
+   
+}
+input[type="checkbox"]:checked ~ .k{
+    transform: translateX(0);
+}
+    </style>
+</head>
+<body>
+    <label >
+        <input type="checkbox">
+        <div class="toggle">
+            <span class="q f" ></span>
+            <span class="a f" ></span>
+            <span class="z f" ></span>
+        </div>
+    <div class="k">
+        <h2>MENO</h2>
+        <li>DASHBOARD</li>
+        <li>PORTFOLIO</li>
+        <li>SETTING</li>
+        <li>FILE-MANAGER</li>
+        <li>MESAGES</li>
+        <li>PROFILE</li>
+        <li>TRENDING</li>
+    </div>
+</label>
+</body>
+</html>
